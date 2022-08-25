@@ -1,0 +1,32 @@
+{
+  "name": "test-npm",
+  "version": "1.0.0",
+  "description": "cars",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmilBacklund/npm-project.git"
+  },
+  "keywords": [
+    "fast",
+    "cars"
+  ],
+  "author": "Emil Backlund",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EmilBacklund/npm-project/issues"
+  },
+  "homepage": "https://github.com/EmilBacklund/npm-project#readme",
+  "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.0"
+  },
+  "devDependencies": {
+    "sass": "^1.54.5",
+    "vite": "^3.0.9"
+  }
+}
