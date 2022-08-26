@@ -1,0 +1,9 @@
+// maps in SASS
+$colours: (
+    primary: orange,
+    secondary: #564154
+);
+
+@function getMyColour($colour){
+    @return map-get($colours, $colour);
+}

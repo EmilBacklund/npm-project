@@ -36,3 +36,62 @@ $utilities: map-merge(
 );
 
 @import "bootstrap/scss/utilities/api";
+
+@import "components/colours";
+@import "components/fonts";
+
+
+
+.head__2 {
+    background-color: getMyColour(secondary);
+    font-size: getMyFont(md);
+    color: white;
+}
+
+
+// mixin in SASS
+@mixin fancy-box($background, $width) {
+  background-color: $background;
+  padding: 64px;
+  border-radius: 4px;
+  margin: 16px;
+  height: 400px;
+  width: $width;
+  box-sizing: border-box;
+}
+
+.head__3 {
+  color: darkblue;
+  @include fancy-box(orange, 50%);
+}
+
+@mixin default-btn($size, $color) {
+  padding: $size;
+  display: flex;
+  align-items: center;
+  color: white;
+  border-radius: 16px;
+  background-color: $color;
+  justify-content: center;
+}
+
+.btn {
+  @include default-btn(16px, red);
+  &.primary {
+    font-size: 48px;
+    @include default-btn(40px, green)
+  }
+}
+
+//inheritance
+.hero-banner {
+  border: 1px solid black;
+  height: 500px;
+  width: 500px;
+  background-color: crimson;
+}
+
+//this class is getting all the properties from ".hero-banner"
+.noroff__main__banner {
+  @extend .hero-banner
+}
