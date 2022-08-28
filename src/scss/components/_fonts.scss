@@ -4,8 +4,6 @@ $fonts: (
     md: 16px
 );
 
-
-
 @function getMyFont($font){
     @return map-get($fonts, $font);
 }
